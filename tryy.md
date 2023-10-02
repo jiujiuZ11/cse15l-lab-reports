@@ -6,3 +6,7 @@
 2. idkk
 3. idkkk
 `println(hi)`
+```
+print 'eat'
+print 'EAT'
+```
