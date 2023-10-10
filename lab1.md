@@ -52,4 +52,26 @@ Out put:Hello.class  Hello.java  messages  README
 Running the ls command with no arguments will list the contents of the current working directory. 
 No error.  
 
+### b. With a Directory Path argument
+```
+[user@sahara ~/lecture1]$ ls /home/lecture1/messages
+en-us.txt  es-mx.txt  jp-ja.txt  zh-cn.txt
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
+```
+**Working Directory: /home/lecture1**  
+When giving a directory path to the ls command, it will list the contents of that specific directory rather than current workingLists all files within the messages directory inside lecture1.  
+No error. 
+
+### c. With a File Path Argument
+```
+[user@sahara ~/lecture1]$ ls Hello.java
+Hello.java
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
+```
+**Working Directory: /home/lecture1**  
+If I provide a file path to the ls command, it will simply display that file name if it exists.  
+No error.  
+
 
