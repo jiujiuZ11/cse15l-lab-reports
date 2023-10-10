@@ -74,4 +74,52 @@ Hello.java
 If I provide a file path to the ls command, it will simply display that file name if it exists.  
 No error.  
 
+## 3. The 'cat' Command
+### a. With No Arguments
+```
+[user@sahara ~/lecture1]$ cat
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
+```
+**Working Directory: /home/lecture1**  
+Running cat without arguments waits for input from the user. To exit, have to press CTRL+D. Display what you entered.
+No error.
+
+### b. With a Directory Path argument
+```
+[user@sahara ~/lecture1]$ cat lecture1/messages
+cat: lecture1/messages: No such file or directory
+[user@sahara ~/lecture1]$ cat messages
+cat: messages: Is a directory
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
+```
+**Working Directory: /home/lecture1**  
+Output: Error message indicating "Is a directory".  
+'cat' expects a file path, not a directory path.
+If provide a directory path to cat, it would result in an error, because cat expects file paths.
+
+### c. With a File Path Argument
+```
+[user@sahara ~/lecture1]$ cat messages/en-us.txt
+Hello World!
+[user@sahara ~/lecture1]$ cat README
+To use this program:
+
+javac Hello.java
+java Hello messages/en-us.txt
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
+```
+**Working Directory: /home/lecture1**  
+The cat command is designed to display the contents of files. If you provide a file path to cat, it will show you the contents of that file. 
+No error.  
+
+
+
+
+
+
+
+
 
