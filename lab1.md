@@ -5,7 +5,7 @@
 [user@sahara ~]$ cd
 [user@sahara ~]$ 
 ```
-**Working Directory: /home**
+**Working Directory: /home**  
 Having no arguments for command implies that the command is executed with its default behavior or settings.
 There is no direct output. Running cd with no arguments takes you to your home directory. 
 No error.
