@@ -84,7 +84,7 @@ No error.
 /home/lecture1
 ```
 **Working Directory: /home/lecture1**  
-Running cat without arguments waits for input from the user. To exit, have to press CTRL+D. Display what you entered.
+Running cat without arguments waits for input from the user. Display what you entered. To exit, have to press CTRL+D. 
 No error.
 
 ### b. With a Directory Path argument
