@@ -29,6 +29,8 @@ No error.
 ```
 [user@sahara ~/lecture1]$ cd lecture1/Hello.java
 bash: cd: lecture1/Hello.java: No such file or directory
+[user@sahara ~/lecture1]$ cd Hello.java
+bash: cd: Hello.java: Not a directory
 [user@sahara ~/lecture1]$ pwd
 /home/lecture1
 ```
