@@ -1,5 +1,5 @@
 # Lab Report 1
 ## 1.The 'cd' Command
-<font color=red>### a.without argument</font>
+<h1 style="color:blue;">This is a blue title</h1>
 ok
 ok
