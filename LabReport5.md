@@ -124,7 +124,51 @@ bash test.sh
 "Good analysis on the test result. It does seem like the issue is related to how duplicates are handled. To further investigate, could you check the loop conditions and the if-else logic in the merge method? Specifically, look at how you're comparing and adding elements from both lists when they are equal. Adding some print statements to log the elements being added to the merged list might also help you see where the method is deviating from the expected behavior."
 ### Student got from trying:
 <img width="1440" alt="Screenshot 2023-12-03 at 8 11 05 PM" src="https://github.com/jiujiuZ11/cse15l-lab-reports/assets/130422166/ce56c822-c31c-461e-a9a7-5291c6080f81">
+To fix the bug in the merge method of the ListExamples class, we need to modify the handling of cases where the elements in the two lists being merged are equal. In the current buggy implementation, when two elements are equal, only the element from list1 is added to the result, and both indices are incremented, causing the method to skip the duplicate element from list2. 
+Adjust the Conditional Logic: Instead of handling equal elements with a separate else block, merge them within the if and else if conditions. When the elements are equal, add both to the result before incrementing the indices.
+Update the merge Method: The fixed method should look like this:
+```
+class ListExamples {
 
+    // ... (other methods)
+
+    static List<String> merge(List<String> list1, List<String> list2) {
+        List<String> result = new ArrayList<>();
+        int index1 = 0, index2 = 0;
+
+        while (index1 < list1.size() && index2 < list2.size()) {
+            if (list1.get(index1).compareTo(list2.get(index2)) <= 0) {
+                result.add(list1.get(index1));
+                if (list1.get(index1).equals(list2.get(index2))) {
+                    // Add element from list2 as well when elements are equal
+                    result.add(list2.get(index2));
+                    index2++;
+                }
+                index1++;
+            } else {
+                result.add(list2.get(index2));
+                index2++;
+            }
+        }
+
+        // Append remaining elements from list1 (if any)
+        while (index1 < list1.size()) {
+            result.add(list1.get(index1));
+            index1++;
+        }
+
+        // Append remaining elements from list2 (if any)
+        while (index2 < list2.size()) {
+            result.add(list2.get(index2));
+            index2++;
+        }
+
+        return result;
+    }
+}
+
+```
+In this revised method, when two elements from list1 and list2 are equal, both elements are added to the merged list, ensuring that duplicates are correctly handled. This change will fix the issue, and the method should now pass all the tests, including those checking for correct merging with duplicates.
 
 ### Clear description of what the bug is:
 The bug in the merge method arises from the way it handles equal elements in the two input lists. When it encounters equal elements, the method is currently designed to add the element from list1 to the result and then increment both index1 and index2. This causes the method to skip adding the duplicate element from list2. The correct behavior should be to add both elements when they are equal before incrementing the indices. As a result of this bug, the merged list ends up missing duplicates, leading to the test failures as the expected and actual list lengths and contents don't match.
