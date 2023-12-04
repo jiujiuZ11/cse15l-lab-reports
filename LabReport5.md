@@ -58,3 +58,18 @@ public class ConfigProcessor {
 }
 
 ```
+### config.txt 
+```
+mode = Advanced
+```
+### runConfigProcessor.sh
+```
+#!/bin/bash
+
+# Compiling the Java program
+javac ConfigProcessor.java
+
+# Running the program
+java ConfigProcessor
+
+```
