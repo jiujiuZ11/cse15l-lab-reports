@@ -8,60 +8,7 @@
 
 ## 2. The contents of each file before fixing the bug
 ### ConfigProcessor.java
-This Java program is designed to demonstrate file handling and configuration management, with a specific focus on how it reads and interprets settings from a configuration file. The primary functionality revolves around adjusting its behavior based on a mode specified in the config.txt file.
 ```
-import java.nio.file.*;
-import java.io.IOException;
-import java.util.List;
-
-public class ConfigProcessor {
-    private static String mode = "default";
-
-    public static void main(String[] args) {
-        try {
-            readConfigFile("config.txt");
-        } catch (IOException e) {
-            System.out.println("Error reading configuration: " + e.getMessage());
-            return;
-        }
-
-        System.out.println("Operating in mode: " + mode);
-        // Perform operation based on the mode
-        performOperation();
-    }
-
-    static void readConfigFile(String fileName) throws IOException {
-        List<String> lines = Files.readAllLines(Paths.get(fileName));
-        for (String line : lines) {
-            if (line.startsWith("mode=")) {
-                // Bug: Incorrectly parses the mode from the configuration file
-                mode = line.split("=")[1].trim().toLowerCase();
-                if (!mode.equals("advanced") && !mode.equals("basic")) {
-                    mode = "default";  // Fallback mode
-                }
-            }
-        }
-    }
-
-    static void performOperation() {
-        switch (mode) {
-            case "advanced":
-                System.out.println("Performing advanced operations...");
-                break;
-            case "basic":
-                System.out.println("Performing basic operations...");
-                break;
-            default:
-                System.out.println("Performing default operations...");
-                break;
-        }
-    }
-}
-
-```
-### config.txt 
-```
-mode = Advanced
 ```
 ### runConfigProcessor.sh
 ```
@@ -74,11 +21,16 @@ javac ConfigProcessor.java
 java ConfigProcessor
 
 ```
-## 3. The full command line (or lines) you ran to trigger the bug
+## 3. The full command line (or lines) I ran to trigger the bug
+### In the post, the student described:
+
 
 ## 4. A description of what to edit to fix the bug
+### Response from a TA:
+### Student got from trying:
+### Clear description of what the bug is:
 
-## Part 2 – Reflection
+# Part 2 – Reflection
 During the second half of this quarter, I learned about Vim. Initially introduced through the vimtutor, I found Vim's modal editing - separating the tasks of inserting text and manipulating text - both challenging and fascinating. It was a departure from the typical text editors I was accustomed to. Despite recognizing Vim's potential for efficiency, I still need more practiced. I often found myself fumbling with commands, which highlighted the vast difference between Vim and the editors I was accustomed to.
 
 
