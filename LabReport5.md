@@ -6,6 +6,8 @@
     └── runConfigProcessor.sh   # The Bash script to compile and run the Java program.
 
 ## 2. The contents of each file before fixing the bug
+### ConfigProcessor.java
+This Java program is designed to demonstrate file handling and configuration management, with a specific focus on how it reads and interprets settings from a configuration file. The primary functionality revolves around adjusting its behavior based on a mode specified in the config.txt file.
 ```
 import java.nio.file.*;
 import java.io.IOException;
