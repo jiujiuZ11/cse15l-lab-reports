@@ -1,4 +1,5 @@
 # Lab Report 5
+# Part 1 – Debugging Scenario
 ## 1. The file & directory structure needed
     .
     ├── ConfigProcessor.java    # The Java file containing the main program with the bug.
@@ -73,3 +74,11 @@ javac ConfigProcessor.java
 java ConfigProcessor
 
 ```
+## 3. The full command line (or lines) you ran to trigger the bug
+
+## 4. A description of what to edit to fix the bug
+
+## Part 2 – Reflection
+
+
+
