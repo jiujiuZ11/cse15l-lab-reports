@@ -1,10 +1,8 @@
 # Lab Report 5
 # Part 1 – Debugging Scenario
 ## 1. The file & directory structure needed
-    .
-    ├── ConfigProcessor.java    # The Java file containing the main program with the bug.
-    ├── config.txt              # The configuration file read by the Java program.
-    └── runConfigProcessor.sh   # The Bash script to compile and run the Java program.
+<img width="327" alt="Screenshot 2023-12-03 at 7 34 58 PM" src="https://github.com/jiujiuZ11/cse15l-lab-reports/assets/130422166/89e44694-371e-46c6-8403-9a1b5ecb85ff">
+
 
 ## 2. The contents of each file before fixing the bug
 ### ConfigProcessor.java
