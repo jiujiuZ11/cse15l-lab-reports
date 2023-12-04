@@ -1,4 +1,4 @@
-# Lab 3
+# Lab 4
 # Clone your fork of the repository from your Github account (using the SSH URL)
 git clone git@github.com:jiujiuZ11/lab.git <enter>
 <img width="1440" alt="Screenshot 2023-12-03 at 11 51 18 PM" src="https://github.com/jiujiuZ11/cse15l-lab-reports/assets/130422166/601c5f64-81fa-4f2d-9fe7-7664d7933f9a">
